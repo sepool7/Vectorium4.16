@@ -55,7 +55,7 @@ const menu_data: MenuItem[] = [
         id: 7,
         has_dropdown: false,
         title: "DeFi Wallet",
-        link: "https://main--walletdefi22.netlify.app/LaqiraFarmingEligibility",
+        link: "http://walletdefi22.netlify.app",
     },
 ];
 export default menu_data;
