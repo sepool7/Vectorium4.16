@@ -55,7 +55,7 @@ const menu_data: MenuItem[] = [
         id: 7,
         has_dropdown: false,
         title: "DeFi Wallet",
-        link: "https://vectoriumdefi.xyz/LaqiraFarmingEligibility",
+        link: "https://vectoriumdefi.xyz",
     },
 ];
 export default menu_data;
