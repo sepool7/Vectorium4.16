@@ -1,12 +1,17 @@
 import { HelmetProvider } from 'react-helmet-async';
 import AppNavigation from './navigation/Navigation';
 import { useEffect } from 'react';
-import { animationCreate } from "./utils/utils";
+import { initGA, logPageView } from './analytics';
+import { BrowserRouter as Router, useLocation } from 'react-router-dom';
+import { animationCreate } from './utils/utils';
 
-function App() {
-
+const App: React.FC = () => {
   useEffect(() => {
-    // animation
+    // Initialize Google Analytics
+    initGA();
+    logPageView(); // Log initial page view
+
+    // Animation
     const timer = setTimeout(() => {
       animationCreate();
     }, 100);
@@ -15,12 +20,23 @@ function App() {
   }, []);
 
   return (
-    <>
-      <HelmetProvider>
+    <HelmetProvider>
+      <Router>
+        <RouteChangeTracker />
         <AppNavigation />
-      </HelmetProvider>
-    </>
+      </Router>
+    </HelmetProvider>
   );
-}
+};
+
+const RouteChangeTracker: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    logPageView(); // Log page view on route change
+  }, [location]);
+
+  return null;
+};
 
 export default App;

@@ -3,8 +3,8 @@ import { Doughnut } from 'react-chartjs-2';
 import 'chart.js/auto';
 
 const tab_title: string[] = ["Funding Allocation", "Token Distribution",];
-const chart_List_1: string[] = ["Contingency: 70%", "Business Development: 20%", "Investor: 30%", "Green Actions: 15%", "Legal & Regulation: 20%", "Carbon FootPrint: 50%"]
-const chart_List_2: string[] = ["Carbon FootPrint: 50%", "Green Actions: 15%", "Legal & Regulation: 20%", "Contingency: 70%", "Business Development: 20%", "Investor: 30%"]
+const chart_List_1: string[] = ["Research and Development: 30%", "Marketing: 25%", "Operations: 15%", "Legal Compliance: 10%", "Green Actions: 20%"]
+const chart_List_2: string[] = ["ICO: 40%", "Founders and Team: 20%", "Development Fund: 15%", "Marketing and Community Incentives: 10%", "Burning Table: 15%"]
 
 const ChartArea = () => {
 
