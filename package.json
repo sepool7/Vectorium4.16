@@ -1,0 +1,22 @@
+{
+    "name": "vectorium",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "preview": "vite preview",
+      "lint:css": "stylelint '**/*.css'"
+    },
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "other-dependency": "^1.0.0"
+    },
+    "devDependencies": {
+      "vite": "^2.0.5",
+      "stylelint": "^14.0.0",
+      "stylelint-config-standard": "^24.0.0"
+    }
+  }
+  
