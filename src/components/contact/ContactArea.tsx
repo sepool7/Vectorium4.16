@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ContactForm from "../forms/ContactForm"
 
 interface DataType {
@@ -8,6 +9,30 @@ interface DataType {
 }
 
 const contact_data: DataType[] = [
+   {
+      id: 1,
+      icon: "fas fa-map-marker-alt",
+      title: "Location",
+      info: (<>1901 Thornridge Cir. <br /> Shiloh, Hawaii</>),
+   },
+   {
+      id: 2,
+      icon: "fas fa-phone-alt",
+      title: "Contact",
+      info: (<><Link to="tel:0123456789">+88(0) 555-0108</Link> <br /> <Link to="tel:0123456789">+88(0) 555-01117</Link></>),
+   },
+   {
+      id: 3,
+      icon: "fas fa-envelope",
+      title: "Email",
+      info: (<><Link to="mailto:vectorium.@example.com">sara.cruz@example.com</Link> <br /> <Link to="mailto:vectorium.@example.com">vectorium.@example.com</Link></>),
+   },
+   {
+      id: 4,
+      icon: "fas fa-business-time",
+      title: "Visit Between",
+      info: (<>Mon - Sat : 8.00-5.00 <br /> Sunday : Closed</>),
+   },
 ]
 
 const ContactArea = () => {

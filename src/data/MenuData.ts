@@ -26,7 +26,7 @@ const menu_data: MenuItem[] = [
     {
         id: 3,
         has_dropdown: false,
-        title: "Tokenomic",
+        title: "Ico Chart",
         link: "/#chart",
     },
     {

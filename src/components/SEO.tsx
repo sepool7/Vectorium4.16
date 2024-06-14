@@ -6,7 +6,7 @@ const SEO = ({ pageTitle }:any) => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{pageTitle} - check check</title>
+        <title>{pageTitle} - ICO & Crypto Landing Page React Next js Template</title>
         <meta name="robots" content="noindex, follow" />
         <meta name="description" content="Zibber - Consulting React Template" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
