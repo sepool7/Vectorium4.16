@@ -26,7 +26,7 @@ const menu_data: MenuItem[] = [
     {
         id: 3,
         has_dropdown: false,
-        title: "Ico Chart",
+        title: "Tokenomic",
         link: "/#chart",
     },
     {
@@ -55,11 +55,7 @@ const menu_data: MenuItem[] = [
         id: 7,
         has_dropdown: false,
         title: "DeFi Wallet",
-<<<<<<< HEAD
-        link: "http://walletdefi22.netlify.app",
-=======
-        link: "https://vectoriumdefi.xyz/LaqiraFarmingEligibility",
->>>>>>> parent of cb01ff8 (link)
+        link: "https://vectoriumdefi.xyz",
     },
 ];
 export default menu_data;
