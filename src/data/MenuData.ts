@@ -55,7 +55,11 @@ const menu_data: MenuItem[] = [
         id: 7,
         has_dropdown: false,
         title: "DeFi Wallet",
+<<<<<<< HEAD
         link: "http://walletdefi22.netlify.app",
+=======
+        link: "https://vectoriumdefi.xyz/LaqiraFarmingEligibility",
+>>>>>>> parent of cb01ff8 (link)
     },
 ];
 export default menu_data;
