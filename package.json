@@ -13,9 +13,11 @@
     "@emailjs/browser": "^4.3.3",
     "@hookform/resolvers": "^3.3.4",
     "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.3",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
     "react-helmet-async": "^2.0.4",
     "react-hook-form": "^7.51.0",
     "react-paginate": "^8.2.0",
@@ -31,6 +33,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/chart.js": "^2.9.41",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@types/react-router-hash-link": "^2.4.9",
