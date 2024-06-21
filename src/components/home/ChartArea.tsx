@@ -3,8 +3,8 @@ import { Doughnut } from 'react-chartjs-2';
 import 'chart.js/auto';
 
 const tab_title: string[] = ["Funding Allocation", "Token Distribution",];
-const chart_List_1: string[] = ["Contingency: 70%", "Business Development: 20%", "Investor: 30%", "Green Actions: 15%", "Legal & Regulation: 20%", "Carbon FootPrint: 50%"]
-const chart_List_2: string[] = ["Carbon FootPrint: 50%", "Green Actions: 15%", "Legal & Regulation: 20%", "Contingency: 70%", "Business Development: 20%", "Investor: 30%"]
+const chart_List_1: string[] = ["Contingency: 10%", "Business Development: 15%", "Investor: 8%", "Green Actions: 12%", "Legal & Regulation: 5%", "Carbon FootPrint: 50%"]
+const chart_List_2: string[] = ["Carbon FootPrint: 50%", "Green Actions: 12%", "Legal & Regulation: 5%", "Contingency: 10%", "Business Development: 15%", "Investor: 8%"]
 
 const ChartArea = () => {
 
@@ -18,8 +18,8 @@ const ChartArea = () => {
 
 
    const chartData = [
-      [70, 20, 30, 15, 20, 50], // Funding Allocation percentages
-      [50, 15, 20, 70, 20, 30]  // Token Distribution percentages
+      [10, 15, 8, 12, 5, 50], // Funding Allocation percentages
+      [50, 12, 5, 10, 15, 8]  // Token Distribution percentages
    ];
 
    const data = {
