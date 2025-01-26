@@ -19,7 +19,7 @@ const blog_data: DataType[] = [
       date: "2024/06/20",
       comment: "07",
       views: "700Viewers",
-      title: "Introducing Vectorium's Proof of Planet Action Staking Pool",
+      title: "Introducing ",
       desc: "A Sustainable Approach to Cryptocurrency As the global community increasingly prioritizes environmental sustainability, the cryptocurrency industry faces mounting pressure to adopt greener practices. Vectorium, a pioneer in green blockchain technology, is stepping up to this challenge with its innovative Proof of Planet Action (PoPA) Staking Pool..",
       author_avatar: "/assets/img/blog/blog_author01.png",
       author_name: "Liam James",
