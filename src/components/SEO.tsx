@@ -17,7 +17,7 @@
 
 // export default SEO;
 
-mport { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const SEO = ({ pageTitle }: { pageTitle: string }) => {
   return (
