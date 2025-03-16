@@ -2,8 +2,8 @@
 
 import { Helmet } from "react-helmet-async";
 
-// // eslint-disable-next-line @typescript-eslint/no-explicit-any
-// const SEO = ({ pageTitle }:any) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const SEO = ({ pageTitle }:any) => {
   return (
     <>
       <Helmet>
