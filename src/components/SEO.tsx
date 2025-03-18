@@ -15,7 +15,7 @@ interface SEOProps {
 const SEO = ({
   pageTitle,
   description = "Transform your carbon footprint with Vectorium's innovative blockchain-based carbon credit platform. Leading the eco-friendly revolution in digital carbon credit trading and verification.",
-  keywords = "blockchain carbon credits, carbon trading, sustainability, eco-friendly blockchain, carbon footprint",
+  keywords = "blockchain carbon credits, carbon trading, sustainability, vectorium holding, Vectorium, VECT, eco-friendly blockchain, carbon footprint",
   ogImage = "https://freecoins24.io/wp-content/uploads/2024/07/dtxm4BGB_400x400.jpg",
   ogTitle,
   ogDescription,
