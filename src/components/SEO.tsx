@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useRouter } from "next/router";
 
 interface SEOProps {
   pageTitle: string;
@@ -14,7 +15,7 @@ interface SEOProps {
 const SEO = ({
   pageTitle,
   description = "Transform your carbon footprint with Vectorium's innovative blockchain-based carbon credit platform. Leading the eco-friendly revolution in digital carbon credit trading and verification.",
-  keywords = "blockchain carbon credits, carbon trading, sustainability, vectorium holding, Vectorium, VECT,  eco-friendly blockchain, carbon footprint", 
+  keywords = "blockchain carbon credits, carbon trading, sustainability, vectorium holding, Vectorium, VECT, eco-friendly blockchain, carbon footprint",
   ogImage = "https://freecoins24.io/wp-content/uploads/2024/07/dtxm4BGB_400x400.jpg",
   ogTitle,
   ogDescription,
@@ -23,6 +24,15 @@ const SEO = ({
 }: SEOProps) => {
   const siteTitle = "Vectorium - Revolutionary Blockchain Carbon Credit Platform";
   const fullTitle = `${pageTitle} | ${siteTitle}`;
+  const router = useRouter();
+  
+  // Create a canonical URL automatically based on the current path
+  const baseUrl = "https://vectorium.co";
+  const path = router.asPath.split("?")[0]; // Remove query parameters
+  const autoCanonicalUrl = `${baseUrl}${path}`;
+  
+  // Use provided canonicalUrl if exists, otherwise use the auto-generated one
+  const finalCanonicalUrl = canonicalUrl || autoCanonicalUrl;
   
   return (
     <Helmet>
@@ -43,6 +53,7 @@ const SEO = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:alt" content="Vectorium blockchain carbon credit platform" />
       <meta property="og:site_name" content={siteTitle} />
+      <meta property="og:url" content={finalCanonicalUrl} />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -51,7 +62,7 @@ const SEO = ({
       <meta name="twitter:image" content={ogImage} />
       
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <link rel="canonical" href={finalCanonicalUrl} />
     </Helmet>
   );
 };
