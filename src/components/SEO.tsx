@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
-import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 interface SEOProps {
-  pageTitle: string;
+  pageTitle: string | { [key: string]: string };
   description?: string;
   keywords?: string;
   ogImage?: string;
@@ -15,21 +15,33 @@ interface SEOProps {
 const SEO = ({
   pageTitle,
   description = "Transform your carbon footprint with Vectorium's innovative blockchain-based carbon credit platform. Leading the eco-friendly revolution in digital carbon credit trading and verification.",
-  keywords = "blockchain carbon credits, carbon trading, sustainability, vectorium holding, Vectorium, VECT, eco-friendly blockchain, carbon footprint",
+  keywords = "blockchain carbon credits, carbon trading, sustainability, eco-friendly blockchain, carbon footprint",
   ogImage = "https://freecoins24.io/wp-content/uploads/2024/07/dtxm4BGB_400x400.jpg",
   ogTitle,
   ogDescription,
   canonicalUrl,
   noIndex = false
 }: SEOProps) => {
-  const siteTitle = "Vectorium - Revolutionary Blockchain Carbon Credit Platform";
-  const fullTitle = `${pageTitle} | ${siteTitle}`;
-  const router = useRouter();
+  // Handle both string and object formats for pageTitle
+  const titleText = typeof pageTitle === 'string' ? pageTitle : 'vectorium';
   
-  // Create a canonical URL automatically based on the current path
+  const siteTitle = "Vectorium - Revolutionary Blockchain Carbon Credit Platform";
+  const fullTitle = `${titleText} | ${siteTitle}`;
   const baseUrl = "https://vectorium.co";
-  const path = router.asPath.split("?")[0]; // Remove query parameters
-  const autoCanonicalUrl = `${baseUrl}${path}`;
+  
+  // State to store the current path
+  const [currentPath, setCurrentPath] = useState("/");
+  
+  // Effect to update the path after component mount (client-side only)
+  useEffect(() => {
+    // Only run in browser environment
+    if (typeof window !== 'undefined') {
+      setCurrentPath(window.location.pathname);
+    }
+  }, []);
+  
+  // Create a canonical URL automatically based on the detected path
+  const autoCanonicalUrl = `${baseUrl}${currentPath}`;
   
   // Use provided canonicalUrl if exists, otherwise use the auto-generated one
   const finalCanonicalUrl = canonicalUrl || autoCanonicalUrl;
@@ -60,6 +72,10 @@ const SEO = ({
       <meta name="twitter:title" content={ogTitle || fullTitle} />
       <meta name="twitter:description" content={ogDescription || description} />
       <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO tags */}
+      <meta name="application-name" content="Vectorium" />
+      <meta name="theme-color" content="#4CAF50" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={finalCanonicalUrl} />
